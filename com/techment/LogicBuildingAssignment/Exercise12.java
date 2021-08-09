@@ -11,7 +11,7 @@ public class Exercise12 {
 		//1 2 3 4 5 4 3 2 1
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter The bumber of lines:");
+		System.out.println("Enter The number of lines:");
 		int n = scanner.nextInt();
 		
 		for(int i=1;i<=n;i++) {
