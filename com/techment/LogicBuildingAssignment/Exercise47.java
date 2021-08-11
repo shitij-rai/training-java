@@ -1,8 +1,8 @@
 package com.techment.LogicBuildingAssignment;
 
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 class Products{
@@ -18,6 +18,13 @@ class Products{
 	
 }
 
+class NameSorting implements Comparator<Products>{
+	@Override
+	public int compare(Products o1, Products o2) {
+		return o1.name.compareTo(o2.name);
+	}
+}
+
 public class Exercise47 {
 
 	public static void main(String[] args) {
@@ -28,15 +35,19 @@ public class Exercise47 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		Products[] productList = new Products[5];
+		ArrayList<Products> productList = new ArrayList<Products>();
 		
 		System.out.println("Enter the p_id , price , name of the 5 products : ");
 		for(int i=0;i<5;i++) {
-			 productList[i] = new Products(scanner.nextInt(), scanner.nextInt(), scanner.nextLine());
-			 
+			 productList.add(new Products(scanner.nextInt(), scanner.nextInt(), scanner.nextLine())) ;
 		}
 		
+		Collections.sort(productList, new NameSorting());
+		for(Products prods : productList) {
+			System.out.println("Product " + "[p_id=" + prods.p_id + " price=" + prods.price + " name=" + prods.name);
+		}
 
+		scanner.close();
 		
 	}
 
