@@ -80,6 +80,10 @@ public class ComparatorDemo {
 		for(Student stu : studentList) {
 			System.out.println("Student [id=" + stu.id + ", age=" + stu.age + ", name=" + stu.name + "]");
 		}
+		
+		for(Student stu : studentList) {
+			System.out.println("Student [id=" + stu.id + ", age=" + stu.age + ", name=" + stu.name + "]");
+		}
 	}
 
 }

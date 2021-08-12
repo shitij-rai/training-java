@@ -2,7 +2,7 @@ package com.techment.LogicBuildingAssignment;
 
 import java.util.Scanner;
 
-public class Excercise45 {
+public class Exercise45 {
 
 	public static void main(String[] args) {
 
